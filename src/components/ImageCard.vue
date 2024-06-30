@@ -1,7 +1,7 @@
 <template>
   <div class="item">
     <a href="#">
-        <img class="image" :src="image.url_n" :alt="image.title">
+        <img class="image" :src="image.url_o" :alt="image.title">
         <div class="body">
         <p v-if="image.title" class="image-title">{{image.title}}</p>
         <p v-else class="image-title">No Title Found</p>
