@@ -13,8 +13,8 @@
 </template>
 
 <script>
+
 import axios from 'axios';
-import config from '../../config';
 import SiteHeader from '../components/SiteHeader.vue';
 import ImageCard from '../components/ImageCard.vue';
 
@@ -48,8 +48,8 @@ export default {
         url: 'https://api.flickr.com/services/rest',
         params: {
           method: 'flickr.photosets.getPhotos',
-          api_key: config.api_key,
-          photoset_id: config.photoset,
+          api_key: process.env.api_key,
+          photoset_id: process.env.photoset,
           extras: 'url_n, url_o, owner_name, date_taken, views',
           page: 1,
           format: 'json',
